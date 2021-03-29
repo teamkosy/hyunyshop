@@ -83,8 +83,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #     }
 # }
 
-pymysql.version_info = (1, 4, 2, "final", 0)
-pymysql.install_as_MySQLdb()
+# pymysql.version_info = (1, 4, 2, "final", 0)
+# pymysql.install_as_MySQLdb()
 
 DATABASES = {
     'default': {
