@@ -11,7 +11,7 @@ Category page
             <a href="/" class="list-group-item {% if not current_category %}active{% endif %}">
                 All
             </a>
-            {% for c in category %}
+            {% for c in categories %}
             <a href="{{c.get_absolute_url}}" class="list-group-item {% if current_category.slug == c.slug %}active{% endif %}">
                 {{c.name}}
             </a>
@@ -19,13 +19,16 @@ Category page
         </div>
     </div>
     <div class="col">
+        <div class="alert alert-info">
         {% if current_category %}{{current_category.name}}{% else %}All Products{% endif %}
-    </div>
+        </div>
     <div class="row">
         {% for product in products %}
         <div class="col-4">
             <div class="card">
-                <img src="cart-image-top" src="{{product.image.url}}" alt="Product Image">
+                {% if product.image %}
+                <img src="card-img-top" src="{{product.image.url}}" alt="Product Image">
+                {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{product.name}}</h5>
                     <p class="card-text">{{product.description}}
