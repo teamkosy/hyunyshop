@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.naver',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -142,7 +143,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR,"static"),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
 MEDIA_ROOT = os.path.join(BASE_DIR,'static')
 
 AUTHENTICATION_BACKENDS = [
@@ -153,3 +154,5 @@ AUTHENTICATION_BACKENDS = [
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
+
+CART_ID = 'cart_item'

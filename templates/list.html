@@ -20,7 +20,7 @@ Category page
     </div>
     <div class="col">
         <div class="alert alert-info">
-        {% if current_category %}{{current_category.name}}{% else %}All Products{% endif %}
+        {% if current_category %}{{current_category.name}}{% else %}전체 상품{% endif %}
         </div>
     <div class="row">
         {% for product in products %}
@@ -34,7 +34,7 @@ Category page
                     <p class="card-text">{{product.description}}
                     <span class="badge badge-secondary">{{product.price}}</span>
                     </p>
-                    <a href="{{product.get_absolute_url}}" class="btn btn-primary">View Detail</a>
+                    <a href="{{product.get_absolute_url}}" class="btn btn-primary">상세보기</a>
                 </div>
             </div>
         </div>
